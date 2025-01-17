@@ -65,10 +65,10 @@ public class SkinTool {
     public static void tryChangeTheme(Object o, LayoutInflaterFactoryImpl layoutInflaterFactory){
         Sp sp = new Sp();
         String curSkinName = sp.getString(TAG_SKIN, "");
-        if(!curSkinName.equals(getObjectSkinName(o))){
+//        if(!curSkinName.equals(getObjectSkinName(o))){
             loadSkinAndChangeTheme(layoutInflaterFactory);
             setObjectSkinName(o, curSkinName);
-        }
+//        }
     }
 
 }

@@ -3,6 +3,7 @@ package xu.myapplication.skin;
 import android.content.Context;
 import android.support.v4.view.LayoutInflaterFactory;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import java.lang.reflect.Constructor;
@@ -62,6 +63,7 @@ public class LayoutInflaterFactoryImpl implements LayoutInflaterFactory {
         for (int i = 0; i < attrs.getAttributeCount(); i++) {
             String attributeName = attrs.getAttributeName(i);//background或者textColor
             String attributeValue = attrs.getAttributeValue(i);//拿到view的在R文件中的id。类似于@2131361811
+            Log.e("MSH", "attributeName--->" + attributeName + "      attributeValue--->" + attributeValue);
             /*if(SkinConstant.BACKGROUND.equalsIgnoreCase(attributeName) || SkinConstant.TEXT_COLOR.equalsIgnoreCase(attributeName)){
                 int resId = Integer.parseInt(attributeValue.substring(1));//截取@2131361811 ，拿到实际的在R文件中的值
                 String resourceTypeName = context.getResources().getResourceTypeName(resId);//background的mipmap或者drawable或者color等
@@ -69,12 +71,12 @@ public class LayoutInflaterFactoryImpl implements LayoutInflaterFactory {
                 ViewAttrs viewAttrs = new ViewAttrs(attributeName, resId, resourceEntryName, resourceTypeName);
                 viewAttrses.add(viewAttrs);
             }*/
-            if("skin".equalsIgnoreCase(attributeName)){
+            if ("skin".equalsIgnoreCase(attributeName)) {
                 //默认对所有控件换肤，但是如果属性中包含有[skin:skin=""],则表示不对该控件做换肤处理
                 skinEnable = false;
                 break;
             }
-            if(!ViewAttrsFactory.contains(attributeName) || attributeValue.indexOf("@") < 0){
+            if (!ViewAttrsFactory.contains(attributeName) || attributeValue.indexOf("@") < 0) {
                 continue;
             }
 
@@ -91,14 +93,15 @@ public class LayoutInflaterFactoryImpl implements LayoutInflaterFactory {
             //保存需要换肤的view以及对应的属性
             SkinView skinView = new SkinView(view, viewAttrses);
             skinViews.add(skinView);
-            if(SkinManager.getInstance().isLoadSkinSuccess()){
+            Log.e("MSH", skinView.toString());
+            if (SkinManager.getInstance().isLoadSkinSuccess()) {
                 skinView.changeTheme();
             }
         }
     }
 
     public void changeTheme() {
-        if(SkinManager.getInstance().getSkinRes() == null){
+        if (SkinManager.getInstance().getSkinRes() == null) {
             Tools.showDebugToast("没有皮肤");
             return;
         }
@@ -118,6 +121,7 @@ public class LayoutInflaterFactoryImpl implements LayoutInflaterFactory {
      */
     private View createView(String name, Context context, AttributeSet attrs) {
 
+        Log.e("MSH", name);
         try {
             Class<? extends View> aClass = (Class<? extends View>) context.getClassLoader().loadClass(name);
             Constructor<? extends View> constructor = aClass.getConstructor(new Class[]{Context.class, AttributeSet.class});
@@ -132,13 +136,12 @@ public class LayoutInflaterFactoryImpl implements LayoutInflaterFactory {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         return null;
     }
-
 
 
 }

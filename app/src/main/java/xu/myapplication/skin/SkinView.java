@@ -12,6 +12,15 @@ import xu.myapplication.skin.attr.ViewAttrs;
  */
 public class SkinView {
 
+
+    @Override
+    public String toString() {
+        return "SkinView{" +
+                "view=" + view +
+                ", viewAttrses=" + viewAttrses +
+                '}';
+    }
+
     private View view;
 
     public ArrayList<ViewAttrs> getViewAttrses() {

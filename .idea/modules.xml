@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SkinAppDemo.iml" filepath="$PROJECT_DIR$/SkinAppDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/skin-colorprimarydark/skin-colorprimarydark.iml" filepath="$PROJECT_DIR$/skin-colorprimarydark/skin-colorprimarydark.iml" />
-      <module fileurl="file://$PROJECT_DIR$/skin-default/skin-default.iml" filepath="$PROJECT_DIR$/skin-default/skin-default.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SKinAppDemo.iml" filepath="$PROJECT_DIR$/.idea/SKinAppDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SKinAppDemo.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.iml" filepath="$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.main.iml" filepath="$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/skin-colorprimarydark/SKinAppDemo.skin-colorprimarydark.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/skin-default/SKinAppDemo.skin-default.iml" filepath="$PROJECT_DIR$/.idea/modules/skin-default/SKinAppDemo.skin-default.iml" />
     </modules>
   </component>
 </project>
